@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        background-color: rgb(49, 27, 121);
+        height: 100vh;
+        width: 110vw;
+        gap: 5px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+
+      .grid {
+        background-color: rgb(15, 16, 16);
+        height: 30vh;
+        width: 33vw;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: auto auto auto;
+        border: 5px solid black;
+      }
+      .grid1 {
+        background-color: rgb(15, 16, 16);
+        height: 30vh;
+        width: 33vw;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: auto auto auto auto;
+        border: 5px solid black;
+      }
+      .grid2 {
+        background-color: rgb(15, 16, 16);
+        height: 30vh;
+        width: 33vw;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: auto auto auto auto auto auto;
+        border: 5px solid black;
+      }
+      .grid3{
+        background-color: rgb(15, 16, 16);
+        height: 30vh;
+        width: 33vw;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: auto auto auto auto auto;
+        border: 5px solid black;
+      }
+      .a1 {
+        background-color: rgb(244, 95, 20);
+      }
+      .a2 {
+        background-color: orange;
+      }
+      .a3 {
+        background-color: brown;
+      }
+      .a4 {
+        background-color: rgb(139, 83, 15);
+      }
+      .a5 {
+        background-color: rgb(180, 114, 21);
+      }
+      .a6 {
+        background-color: rgb(29, 85, 21);
+      }
+      .b1 {
+        background-color: rgb(244, 95, 20);
+        grid-column: 1/3;
+      }
+      .b2 {
+        background-color: orange;
+        grid-row: 1/3;
+        grid-column: 3/4;
+      }
+      .b3 {
+        background-color: brown;
+      }
+      .b4 {
+        background-color: rgb(139, 83, 15);
+      }
+
+      .c1 {
+        background-color: rgb(244, 95, 20);
+        grid-column: 1/4;
+      }
+      .c2 {
+        background-color: orange;
+      }
+      .c3 {
+        background-color: brown;
+        grid-column: 2/4;
+      }
+      .c4 {
+        background-color: rgb(29, 85, 21);
+        grid-column: 1/4;
+      }
+      .d1 {
+        background-color: orangered;
+        grid-column: 1/3;
+      }
+      .d2 {
+        background-color: rgb(184, 17, 17);
+        grid-column: 3/5;
+      }
+      .d3 {
+        background-color: rgb(5, 46, 5);
+      }
+      .d4 {
+        background-color: rgba(3, 85, 34, 0.853);
+        grid-column: 2/5;
+      }
+      .d5 {
+        background-color: rgb(82, 58, 15);
+        grid-column: 1/5;
+      }
+      .e1 {
+        background-color: green;
+      }
+      .e2 {
+        background-color: rgb(8, 10, 48);
+      }
+      .e3 {
+        background-color: rgb(153, 16, 146);
+      }
+      .e4 {
+        background-color: rgb(114, 88, 18);
+      }
+      .e5 {
+        background-color: rgb(56, 18, 73);
+      }
+      .e6 {
+        background-color: rgb(26, 150, 92);
+      }
+      .e7 {
+        background-color: rgb(56, 35, 193);
+      }
+      .e8 {
+        background-color: rgb(118, 17, 190);
+      }
+      .e9 {
+        background-color: rgb(38, 201, 68);
+      }
+      .e10 {
+        background-color: rgb(219, 151, 69);
+      }
+      .e11 {
+        background-color: rgb(17, 209, 190);
+      }
+      .e12 {
+        background-color: rgb(189, 204, 25);
+      }
+      .e13 {
+        background-color: rgba(137, 183, 29, 0.744);
+      }
+      .e14 {
+        background-color: rgb(165, 152, 180);
+      }
+      .e15 {
+        background-color: rgb(192, 98, 44);
+      }
+
+      .e16 {
+        background-color: rgb(155, 16, 94);
+      }
+      .e17 {
+        background-color: rgb(107, 38, 12);
+      }
+      .e18 {
+        background-color: rgb(28, 121, 24);
+      }
+      .f1{
+        background-color: rgb(143, 23, 23);
+        grid-column: 1/3;;
+      }
+      .f2{
+        background-color: rgb(88, 187, 81);
+      }
+      .f3{
+        background-color: rgb(205, 82, 10);
+      }
+      .f4{
+        background-color: rgb(208, 15, 15);
+      }
+      .f5{
+        background-color: rgb(108, 87, 11);
+      }
+      .f6{
+        background-color: rgb(45, 5, 75);
+      }
+      /* .f7{
+        background-color: rgb(23, 143, 89);
+      } */
+      .f8{
+        background-color: rgb(252, 37, 44);
+        grid-row: 3/5;
+        grid-column: 1/3;
+      }
+      .f9{
+        background-color: rgb(168, 18, 86);
+      }
+      .f10{
+        background-color: rgb(23, 131, 143);
+      }
+      .f11{
+        background-color: rgb(104, 62, 62);
+      }
+       .f14{
+        background-color: rgb(19, 19, 187);
+        grid-column: 1/4;
+       }
+       .f15{
+        background-color: rgb(35, 222, 229);
+       }
+       .g1{
+        background-color: orangered;
+        grid-column: 1/3;
+       }
+       .g2{
+        background-color: rgb(30, 148, 109);
+        grid-column:3/5;
+       }
+       .g3{
+        background-color: rgb(78, 5, 20);
+        grid-row:2/4;
+        grid-column:1/3;
+       }
+       .g4{
+        background-color:rgb(10, 79, 56); 
+        grid-column:3/5;
+       }
+       .g5{
+        background-color: burlywood;
+       }
+       .g6{
+        background-color: aqua;
+       }
+       .g{
+        border: 5px green solid;
+       }
+       .h1{
+        background-color: rgb(135, 14, 14);
+       }
+       .h2{
+        background-color: rgb(236, 83, 27);
+       }
+       .h3{
+        background-color: rgb(18, 126, 90);
+       }
+       .h4{
+        background-color: rgb(29, 97, 97);
+       }
+       .h5{
+        background-color:crimson;
+       }
+       .h6{
+        background-color: rgb(236, 83, 27);
+       }
+       .h7{
+        background-color: rgb(135, 14, 14);
+       }
+       .h8{
+        background-color: rgb(221, 142, 113);
+        grid-column: 3/6;
+       }
+       .h9{
+        background-color: rgb(81, 130, 16);
+        grid-column: 1/6;
+       }
+       .i1{
+        background-color: rgb(236, 83, 27);
+        grid-column:1/4;
+       }
+       .i2{
+        background-color: rgba(5, 85, 5, 0.781);
+        grid-row: 2/4;
+       
+       }
+       .i3{
+        background-color: rgb(29, 120, 120);
+        grid-column: 2/4;
+       }
+       .i4{
+        background-color: brown;
+       }
+       .i5{
+        background-color: rgb(236, 83, 27);
+       }
+       
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="grid">
+        <div class="a1"></div>
+        <div class="a2"></div>
+        <div class="a3"></div>
+        <div class="a4"></div>
+        <div class="a5"></div>
+        <div class="a6"></div>
+      </div>
+      <div class="grid">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+        <div class="b4"></div>
+      </div>
+
+      <div class="grid">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+      </div>
+      <div class="grid1">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+        <div class="d5"></div>
+      </div>
+      <div class="grid2">
+        <div class="e1"></div>
+        <div class="e2"></div>
+        <div class="e3"></div>
+        <div class="e4"></div>
+        <div class="e5"></div>
+        <div class="e6"></div>
+        <div class="e7"></div>
+        <div class="e8"></div>
+        <div class="e9"></div>
+        <div class="e10"></div>
+        <div class="e11"></div>
+        <div class="e12"></div>
+        <div class="e13"></div>
+        <div class="e14"></div>
+        <div class="e15"></div>
+        <div class="e16"></div>
+        <div class="e17"></div>
+        <div class="e18"></div>
+      </div>
+      <div class="grid1">
+        <div class="f1"></div>
+        <div class="f2"></div>
+        <div class="f3"></div>
+        <div class="f4"></div>
+        <div class="f5"></div>
+        <div class="f6"></div>
+        <div class="f7"></div>
+        <div class="f8"></div>
+        <div class="f9"></div>
+        <div class="f10"></div>
+        <div class="f11"></div>
+        <div class="f13"></div>
+        <div class="f14"></div>
+        <div class="f15"></div>
+      </div>
+      <div class="grid1">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g g4"></div>
+        <div class="g g5"></div>
+        <div class="g g6"></div>
+      </div>
+      <div class="grid3">
+        <div class="h1"></div>
+        <div class="h2"></div>
+        <div class="h3"></div>
+        <div class="h4"></div>
+        <div class="h5"></div>
+        <div class="h6"></div>
+        <div class="h7"></div>
+        <div class="h8"></div>
+        <div class="h9"></div>
+      </div>
+      <div class="grid">
+        <div class="i1"></div>
+        <div class="i2"></div>
+        <div class="i3"></div>
+        <div class="i4"></div>
+        <div class="i5"></div>
+      </div>
+    </div>
+  </body>
+</html>
